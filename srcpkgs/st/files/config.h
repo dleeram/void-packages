@@ -6,7 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "bitmap:pixelsize=14";
-static int borderpx = 2;
+static int borderpx = 10;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -86,29 +86,29 @@ unsigned int tabspaces = 8;
 static const char *colorname[] = {
 	/* 8 normal colors */
 	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+	"#aa4450",
+	"#719611",
+	"#ff9800",
+	"#6688aa",
+	"#7a378b",
+	"#528b8b",
+	"#888888",
 
 	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+	"#4c4c4c",
+	"#d43f10",
+	"#cef318",
+	"#ede265",
+	"#6ac0fd",
+	"#ed79ae",
+	"#49d4dd",
+	"#ffffff",
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
+	"#ffffff",
+	"#222222",
 };
 
 
@@ -116,10 +116,10 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 7;
-unsigned int defaultbg = 0;
-static unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 257;
+unsigned int defaultfg = 256;
+unsigned int defaultbg = 257;
+static unsigned int defaultcs = 7;
+static unsigned int defaultrcs = 8;
 
 /*
  * Default shape of cursor
